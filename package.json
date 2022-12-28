@@ -1,6 +1,6 @@
 {
   "name": "@akdasa-studios/framework-firebase",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Firebease support for Framework",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -32,7 +32,8 @@
   },
   "homepage": "https://github.com/akdasa-studios/framework#readme",
   "dependencies": {
-    "@akdasa-studios/framework": "0.2.1"
+    "@akdasa-studios/framework": "0.2.1",
+    "firebase": "^9.15.0"
   },
   "devDependencies": {
     "@stryker-mutator/core": "^6.3.0",
@@ -49,7 +50,6 @@
     "typescript": "^4.9.3",
     "webpack-cli": "^5.0.0",
     "webpack": "^5.75.0",
-    "@microsoft/api-extractor": "^7.33.6",
-    "firebase": "^9.15.0"
+    "@microsoft/api-extractor": "^7.33.6"
   }
 }
