@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress",
+    "dashboard"
+  ],
+  "testRunner": "jest",
+  "coverageAnalysis": "perTest",
+  "checkers": [
+    "typescript"
+  ],
+  "ignorePatterns": [
+    "coverage/*",
+    "dist/*"
+  ],
+  "tsconfigFile": "tsconfig.json",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 100
+  },
+  "incremental": true
+}
