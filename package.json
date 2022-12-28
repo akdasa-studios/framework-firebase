@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/akdasa-studios/framework#readme",
   "dependencies": {
-    "@akdasa-studios/framework": "0.2.1",
+    "@akdasa-studios/framework": "0.2.3",
     "firebase": "^9.15.0"
   },
   "devDependencies": {
