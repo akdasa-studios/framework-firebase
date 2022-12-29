@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore , enableIndexedDbPersistence } from 'firebase/firestore'
+import { getFirestore , enableIndexedDbPersistence, enableNetwork, disableNetwork } from 'firebase/firestore'
 // import { initializeAuth } from 'firebase/auth'
 
 
@@ -14,7 +14,7 @@ export interface FirebaseConfig {
   measurementId: string
 }
 
-export function setupFirebase(
+export function firebaseSetup(
   firebaseConfig: FirebaseConfig,
   persistance = false
 ) {
@@ -28,4 +28,12 @@ export function setupFirebase(
         console.log(err)
       })
   }
+}
+
+export async function firebaseEnableNetwork() {
+  await enableNetwork(getFirestore())
+}
+
+export async function firebaseDisableNetwork() {
+  await disableNetwork(getFirestore())
 }

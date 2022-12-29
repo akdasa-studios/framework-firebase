@@ -1,6 +1,6 @@
 {
   "name": "@akdasa-studios/framework-firebase",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Firebease support for Framework",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
