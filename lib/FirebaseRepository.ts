@@ -1,5 +1,5 @@
 import {
-  Aggregate, AnyIdentity, Expression, LogicalOperators, Operators,
+  Aggregate, AnyIdentity, Expression, Identity, LogicalOperators, Operators,
   Predicate, Query, Repository, Result
 } from '@akdasa-studios/framework'
 import {
@@ -140,7 +140,7 @@ class QueryConverter {
         where(
           query.field,
           this.operatorsMap[query.operator],
-          query.value
+          this.getValue(query.value)
         )]
     } else if (query instanceof Expression) {
       if (query.operator !== LogicalOperators.And) { throw 'not supported query' }
@@ -150,5 +150,12 @@ class QueryConverter {
       }
     }
     return result
+  }
+
+  getValue(object: unknown) {
+    if (object instanceof Identity) {
+      return object.value
+    }
+    return object
   }
 }
